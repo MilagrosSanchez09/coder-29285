@@ -258,6 +258,26 @@ main h2{
     color: white;
 }
 
+.about__html{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.about__title{
+    color: white;
+}
+
+.p__about--html{
+    color: white;
+}
+
 /*ARTICULOS*/
 
 main{
@@ -506,11 +526,7 @@ input{
         max-width: 1200px;
         flex-wrap: wrap;
     }
-
-    .article__contact{
-        padding-left: 50px;
-    }
-
+    
     .footer .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1,1fr);
