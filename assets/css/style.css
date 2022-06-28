@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fbede0;
+    z-index: 100;
+}
+
+/*HEADER SUPERIOR*/
+
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo p{
+   color: #755758 ;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 24px;
+}
+
+.search input{
+    width: 300px;
+    padding: 10px;
+}
+
+/*BARRA MENU*/
+
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background: #fbede0;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: #755758;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*SUBMENU*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fbede0;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content:'';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: black;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #755758;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*SLIDER*/
+
+main article h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.slider{
+    width: 100%;
+    margin: auto;
+    height: 900px;
+    overflow: hidden;
+}
+
+.slider ul{
+    padding: 0;
+    display: flex;
+    animation: slider 20s infinite alternate;
+    animation-timing-function: linear;
+    width: 400%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider li img{
+    width: 100%;
+}
+
+@keyframes slider{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%}
+    45%{margin-left: -100%}
+
+    50%{margin-left: -200%}
+    70%{margin-left: -200%}
+
+    75%{margin-left: -300%}
+    100%{margin-left: -300%}
+}
+
+main h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.container__card{
+    width:100%;
+    display:flex;
+    max-width: 1200px;
+}
+
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0,2);
+    cursor: default;
+    transition: all 300ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+    transform: translateY(-3%);
+}
+
+.card img{
+    width: 100%;
+    height: 210px;
+}
+
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p{
+    line-height: 1.5;
+    color: black;
+}
+
+.card .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: black;
+    border: 1px solid #755758;
+    border-radius: 4px;
+    transition: all 300ms ease;
+}
+
+.card .contenido a:hover{
+    background: #755758;
+    color: white;
+}
+
+/*ARTICULOS*/
+
+main{
+    background: white;
+    padding: 40px 20x;
+    margin-top: 194px;
+}
+
+article{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #fff;
+}
+
+article p{
+    top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+article .p__about{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+article .about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+/*CONTACTO*/
+
+.article__contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.article__contact label{
+    color: #755758;
+}
+
+.boton__contacto:hover{
+    background: #755758;
+    color: white;
+    border-color: black;
+}
+input{
+    background-color: hsl(0, 0%, 98%); 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: var(--dark-gray); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  textarea{
+    background-color: hsl(0, 0%, 98%); 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: var(--dark-gray); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+
+/*FOOTER*/
+.footer{
+    width: 100%;
+    background-color: #fbede0;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.footer .grupo-1 .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .grupo-1 .box p{
+    color: black;
+    margin-bottom: 10px;
+}
+
+.footer .grupo-1 .box .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    background-color: #fbede0;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .box .red-social a:hover{
+    color: #755758;
+}
+
+.footer .grupo-2{
+    background-color: #fbede0;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+}
+
+/*ELEMENTOS RESPONSIVE*/
+.icon__menu{
+    font-size: 26px;
+    color: black;
+    cursor: pointer;
+    width: 26x;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+@media screen and (max-width: 720px){
+    .logo p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .search input{
+        display: none;
+    }
+
+    .header__superior{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 200px;
+    }
+
+    nav > ul{
+        flex-direction: column;
+        background-color: #fbede0;
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav ul li:hover ul{
+        top: 50px;
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .container__card{
+        width:95%;
+        display:flex;
+        max-width: 1200px;
+        flex-wrap: wrap;
+    }
+
+    .footer .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
